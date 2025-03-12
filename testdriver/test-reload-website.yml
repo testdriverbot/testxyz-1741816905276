@@ -1,0 +1,9 @@
+version: 4.2.18
+session: 67d2066e688455a08d68acbb
+steps:
+  - prompt: Click the "Reload" button.
+    commands:
+      - command: hover-text
+        text: Reload
+        description: reload button on the error page
+        action: click
