@@ -1,0 +1,28 @@
+version: 4.2.18
+session: 67d206646c034d81f8c8ba8b
+steps:
+  - prompt: Open a different browser.
+    commands:
+      - command: hover-text
+        text: Microsoft Edge
+        description: Microsoft Edge in the Start menu
+        action: click
+  - prompt: Navigate to the same URL.
+    commands:
+      - command: hover-text
+        text: Search the web
+        description: address bar in Microsoft Edge
+        action: click
+      - command: press-keys
+        keys:
+          - control
+          - v
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: >-
+      Assert that the website is accessible.  # Use the content of the file from
+      the environment
+    commands:
+      - command: assert
+        expect: the website is accessible with "Search the web" visible
