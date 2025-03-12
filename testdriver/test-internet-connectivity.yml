@@ -1,0 +1,15 @@
+version: 4.2.18
+session: 67d2066c6c034d81f8c8ba95
+steps:
+  - prompt: Run Windows Network Diagnostics.
+    commands:
+      - command: hover-text
+        text: try running Windows Network Diagnostics
+        description: link to run Windows Network Diagnostics on the error page
+        action: click
+  - prompt: >-
+      Assert that there are no connectivity issues reported.  # Use the content
+      of the file from the environment
+    commands:
+      - command: assert
+        expect: Troubleshooting couldn't identify the problem
