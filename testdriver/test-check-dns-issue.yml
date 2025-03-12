@@ -1,0 +1,12 @@
+version: 4.2.18
+session: 67d206666c034d81f8c8ba8d
+steps:
+  - prompt: Check network connection settings.
+    commands:
+      - command: hover-image
+        description: network icon in the system tray
+        action: click
+      - command: hover-text
+        text: Network & Internet settings
+        description: option to open network settings
+        action: click
